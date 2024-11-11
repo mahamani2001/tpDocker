@@ -5,13 +5,14 @@ pipeline {
     }
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub')
-        IMAGE_NAME_SERVER = 'maha487/mern-server'
-        IMAGE_NAME_CLIENT = 'maha487/mern-client'
-    }
+        IMAGE_NAME_SERVER = 'maha487/mern-server' 
+        IMAGE_NAME_CLIENT = 'maha487/mern-client' 
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'git@github.com:mahamani2001/tpDocker.git', credentialsId: '760ee44f-d791-48d5-8ead-596e5b86ae14'
+                git branch: 'main', 
+                    url: 'git@github.com/project.git', 
+                    credentialsId: '760ee44f-d791-48d5-8ead-596e5b86ae14'
             }
         }
         stage('Build Server Image') {
